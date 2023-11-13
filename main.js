@@ -21,6 +21,20 @@ function getNextChore() {
     document.getElementById("displayChore").innerText = chore;
 }
 
+function advanceToNextCategory() {
+    if (countCategory1 < 5) {
+        countCategory1 = 5; // Move to Category 2
+    } else if (countCategory2 < 3) {
+        countCategory2 = 3; // Move to Category 3
+    } else {
+        // Reset to Category 1 if already in Category 3
+        countCategory1 = 0;
+        countCategory2 = 0;
+    }
+    // Optional: Display a chore immediately after advancing
+    getNextChore();
+}
+
 document.getElementById("loginButton").addEventListener("click", function() {
     var password = document.getElementById("passwordInput").value;
     if(password === "0630") {
@@ -34,3 +48,7 @@ document.getElementById("loginButton").addEventListener("click", function() {
 
 
 document.getElementById("getChore").addEventListener("click", getNextChore);
+
+// New event listener for advancing to the next category
+document.getElementById("nextCategory").addEventListener("click", advanceToNextCategory);
+
