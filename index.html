@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Time</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+            console.log('Service Worker Registered!', registration);
+        })
+        .catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    }
+</script>
+
+</head>
+<body>
+    <h1>I Love You</h1>
+    <p id="displayChore"></p>
+    <button id="getChore">Next Act</button>
+    <script src="main.js"></script>
+</body>
+</html>
