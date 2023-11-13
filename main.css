@@ -49,6 +49,11 @@ button:hover {
 
 /* ... other styles ... */
 
+#displayChore img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
 
 /* Responsive Styles */
 @media (max-width: 600px) {
