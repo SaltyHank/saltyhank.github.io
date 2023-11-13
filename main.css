@@ -6,6 +6,10 @@ body {
     background-color: #f4f4f4;
 }
 
+p {
+    font-size: 1.2em; /* Adjust the value as needed */
+}
+
 button {
     margin: 20px auto; /* Center the button */
     padding: 10px 15px;
