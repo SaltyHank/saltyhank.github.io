@@ -35,21 +35,24 @@ let countCategory1 = 0;
 let countCategory2 = 0;
 
 function getNextChore() {
+    let choreDisplay = document.getElementById("displayChore");
     let chore;
     if (countCategory1 < 5) {
         chore = choresCategory1[Math.floor(Math.random() * choresCategory1.length)];
         countCategory1++;
+        choreDisplay.innerHTML = chore;
     } else if (countCategory2 < 3) {
         chore = choresCategory2[Math.floor(Math.random() * choresCategory2.length)];
         countCategory2++;
-        choreDisplay.innerHTML = `${chore.name}<br><img src="${chore.imageUrl}" alt="Chore Image">`;
+        choreDisplay.innerHTML = `<img src="${chore.imageUrl}" alt="Chore Image"><br>${chore.name}`;
     } else {
         chore = choresCategory3[Math.floor(Math.random() * choresCategory3.length)];
+        choreDisplay.innerHTML = chore;
         countCategory1 = 0;
         countCategory2 = 0;
     }
-    document.getElementById("displayChore").innerText = chore;
 }
+
 
 function advanceToNextCategory() {
     if (countCategory1 < 5) {

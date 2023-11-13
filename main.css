@@ -50,7 +50,7 @@ button:hover {
 /* ... other styles ... */
 
 #displayChore img {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
     margin-top: 20px;
 }
