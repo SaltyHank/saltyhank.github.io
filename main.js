@@ -21,4 +21,16 @@ function getNextChore() {
     document.getElementById("displayChore").innerText = "Your next fun is: " + chore;
 }
 
+document.getElementById("loginButton").addEventListener("click", function() {
+    var password = document.getElementById("passwordInput").value;
+    if(password === "0630") {
+        document.getElementById("loginContainer").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+    } else {
+        alert("Incorrect Password!");
+        document.getElementById("passwordInput").value = ""; // Clear the input field
+    }
+});
+
+
 document.getElementById("getChore").addEventListener("click", getNextChore);

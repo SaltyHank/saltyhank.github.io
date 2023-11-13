@@ -27,6 +27,21 @@ button:hover {
     margin-top: 20px;
 }
 
+/* ... other styles ... */
+
+#loginContainer {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#passwordInput {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* ... other styles ... */
+
+
 /* Responsive Styles */
 @media (max-width: 600px) {
     body {
