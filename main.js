@@ -18,7 +18,7 @@ function getNextChore() {
         countCategory1 = 0;
         countCategory2 = 0;
     }
-    document.getElementById("displayChore").innerText = "Your next fun is: " + chore;
+    document.getElementById("displayChore").innerText = chore;
 }
 
 document.getElementById("loginButton").addEventListener("click", function() {
