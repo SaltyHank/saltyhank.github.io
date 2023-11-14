@@ -10,14 +10,26 @@ body {
     background-color: #f4f4f4;
 }
 
-p {
-    font-size: 1.5em; /* Adjust the value as needed */
+h1 {
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background-color: #fff; /* Background color, can be adjusted */
+    text-align: center; /* Center the text */
+    margin-top: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better separation */
 }
+
+p {
+    font-size: 1.75em; /* Adjust the value as needed */
+   }
 
 button {
     margin: 20px auto; /* Center the button */
     padding: 10px 15px;
-    font-size: 1em;
+    font-size: 1.25em;
     background-color: #37647D;
     color: white;
     border: none;
@@ -29,15 +41,16 @@ button {
 
 #nextCategory {
     background-color: #7D373A;
+    font-size: 1em;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #37647D;
 }
 
-#displayChore {
+/*#displayChore {
     margin-top: 20px;
-}
+}*/
 
 /* ... other styles ... */
 
