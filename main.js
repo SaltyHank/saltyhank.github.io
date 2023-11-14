@@ -1,3 +1,5 @@
+let choresCategory0 = ["Mutually Masturbate", "Taylor Suck James Dick", "James eat Taylor out", "69 each other with Taylor on top"
+                      ];
 let choresCategory1 = ["Taylor suck James dick", 
                        "Masturbate each other", 
                        "Taylor, put lube on the buttplug and stick it in James ass", 
@@ -95,42 +97,58 @@ let choresCategory2 = [
 
 ];
 
+let currentCategory = 0;
+let countCategory0 = 0;
 let countCategory1 = 0;
 let countCategory2 = 0;
 
 function getNextChore() {
     let choreDisplay = document.getElementById("displayChore");
     let chore;
-    if (countCategory1 < 5) {
+
+    if (currentCategory === 0) {
+        chore = choresCategory0[Math.floor(Math.random() * choresCategory0.length)];
+        countCategory0++;
+        choreDisplay.innerHTML = "Let's start off with: " + chore;
+        if (countCategory0 >= 1) {
+            currentCategory = 1; // Move to the next category
+        }
+    } else if (currentCategory === 1 && countCategory1 < 5) {
         chore = choresCategory1[Math.floor(Math.random() * choresCategory1.length)];
         countCategory1++;
         choreDisplay.innerHTML = chore;
-    } else if (countCategory2 < 5) {
+        if (countCategory1 >= 5) {
+            currentCategory = 2; // Move to Category 2
+        }
+    } else if (currentCategory === 2 && countCategory2 < 4) {
         chore = choresCategory2[Math.floor(Math.random() * choresCategory2.length)];
         countCategory2++;
         choreDisplay.innerHTML = `<img src="${chore.imageUrl}" alt="Chore Image"><br>${chore.name}`;
-    } else {
+        if (countCategory2 >= 4) {
+            currentCategory = 3; // Move to Category 3
+        }
+    } else if (currentCategory === 3) {
         chore = choresCategory3[Math.floor(Math.random() * choresCategory3.length)];
-        choreDisplay.innerHTML = chore;
+        choreDisplay.innerHTML = "Finish: " + chore;
+        // Reset counters if needed
         countCategory1 = 0;
         countCategory2 = 0;
+        currentCategory = 1; // Optionally reset to Category 0 or set to 1 to skip Category 0 in the next cycle
     }
 }
+
 
 
 function advanceToNextCategory() {
-    if (countCategory1 < 5) {
-        countCategory1 = 5; // Move to Category 2
-    } else if (countCategory2 < 3) {
-        countCategory2 = 5; // Move to Category 3
+    if (currentCategory < 3) {
+        currentCategory++; // Increment to move to the next category
     } else {
-        // Reset to Category 1 if already in Category 3
-        countCategory1 = 0;
-        countCategory2 = 0;
+        currentCategory = 0; // Reset to Category 0 if already at the last category
     }
-    // Optional: Display a chore immediately after advancing
-    getNextChore();
+    getNextChore(); // Display a chore from the new current category
 }
+
+window.onload = getNextChore;
 
 document.getElementById("loginButton").addEventListener("click", function() {
     var password = document.getElementById("passwordInput").value;

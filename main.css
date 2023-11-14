@@ -18,13 +18,17 @@ button {
     margin: 20px auto; /* Center the button */
     padding: 10px 15px;
     font-size: 1em;
-    background-color: #007bff;
+    background-color: #37647D;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     box-sizing: border-box; /* Include padding and border in the width and height */
     display: block; /* To enable margin auto for centering */
+}
+
+#nextCategory {
+    background-color: #7D373A;
 }
 
 button:hover {
