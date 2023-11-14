@@ -64,14 +64,14 @@ button:hover {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     justify-content: flex-end; /* Align items to the end of the container */
-    height: 67vh; /* Adjust this value as needed */
+    height: 60vh; /* Adjust this value as needed */
     width: 100%;
     margin-top: auto; /* This will push the buttons further down */
 }
 
 /* Increased specificity for overriding */
 #mainContent #buttonContainer.buttonContainerWithImage {
-    height: 50vh; /* New height when an image is shown */
+    height: 40vh; /* New height when an image is shown */
 }
 
 /* Styles for buttons inside the container */
