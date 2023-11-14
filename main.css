@@ -42,6 +42,7 @@ button {
 #nextCategory {
     background-color: #7D373A;
     font-size: 1em;
+    margin-top: 30px;
 }
 
 button:hover {
