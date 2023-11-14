@@ -1,13 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: #f4f4f4;
+    /* ... existing styles ... */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding-top: 60px; /* Adjust based on the height of your fixed header */
 }
 
 h1 {
@@ -22,9 +16,11 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better separation */
 }
 
-p {
-    font-size: 1.75em; /* Adjust the value as needed */
-   }
+#displayChore {
+    font-size: 1.75em; /* Adjust as needed */
+    margin-top: 20px; /* Space below the header */
+    /* Add any additional styles needed for positioning */
+}
 
 button {
     margin: 20px auto; /* Center the button */
@@ -37,6 +33,13 @@ button {
     cursor: pointer;
     box-sizing: border-box; /* Include padding and border in the width and height */
     display: block; /* To enable margin auto for centering */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+#mainContent {
+    margin-top: auto; /* Pushes the content to the bottom */
+    width: 100%; /* Ensures it takes full width */
+    text-align: center; /* Center content */
 }
 
 #nextCategory {
@@ -48,9 +51,7 @@ button:hover {
     background-color: #37647D;
 }
 
-/*#displayChore {
-    margin-top: 20px;
-}*/
+
 
 /* ... other styles ... */
 
