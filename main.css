@@ -24,12 +24,13 @@ h1 {
 
 p {
     font-size: 1.75em; /* Adjust the value as needed */
+    margin-bottom: 30px;
    }
 
 button {
     margin: 20px auto; /* Center the button */
     padding: 10px 15px;
-    font-size: 1.25em;
+    font-size: 1.75em;
     background-color: #37647D;
     color: white;
     border: none;
@@ -58,6 +59,10 @@ button:hover {
 #loginContainer {
     text-align: center;
     margin-top: 20%;
+}
+
+#loginButton {
+    font-size: 1.25em;
 }
 
 #passwordInput {
