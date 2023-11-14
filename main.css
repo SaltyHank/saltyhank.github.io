@@ -9,6 +9,16 @@ body {
     padding: 0; /* Remove default padding */
     background-color: #f4f4f4;
 }
+#mainContent {
+    display: flex; 
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space between children */
+    align-items: center; /* Center-align items horizontally */
+    height: 100vh; /* Take full viewport height */
+    padding-top: 60px; /* Adjust based on the height of your fixed header */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
 
 h1 {
     position: fixed; /* Fixed position */
@@ -24,7 +34,6 @@ h1 {
 
 p {
     font-size: 1.75em; /* Adjust the value as needed */
-    margin-bottom: 30px;
    }
 
 button {
@@ -50,11 +59,25 @@ button:hover {
     background-color: #37647D;
 }
 
-/*#displayChore {
-    margin-top: 20px;
-}*/
+/* Style for the new button container */
+#buttonContainer {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-end; /* Align items to the end of the container */
+    height: 67vh; /* Adjust this value as needed */
+    width: 100%;
+    margin-top: auto; /* This will push the buttons further down */
+}
 
-/* ... other styles ... */
+/* Increased specificity for overriding */
+#mainContent #buttonContainer.buttonContainerWithImage {
+    height: 50vh; /* New height when an image is shown */
+}
+
+/* Styles for buttons inside the container */
+#buttonContainer button {
+    /* Add styles for your buttons if needed */
+}
 
 #loginContainer {
     text-align: center;
@@ -87,6 +110,11 @@ button:hover {
     button {
         width: 90%; /* Adjust the width to be less than 100% */
         padding: 15px;
-        font-size: 1.2em;
+        font-size: 1.75em;
     }
+    
+    #nextCategory {
+    font-size: 1em;
+    padding: 10px;
+}
 }

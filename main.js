@@ -104,12 +104,14 @@ let countCategory2 = 0;
 
 function getNextChore() {
     let choreDisplay = document.getElementById("displayChore");
+    let buttonContainer = document.getElementById("buttonContainer");
     let chore;
 
     if (currentCategory === 0) {
         chore = choresCategory0[Math.floor(Math.random() * choresCategory0.length)];
         countCategory0++;
         choreDisplay.innerHTML = "Let's start off with: " + chore;
+        buttonContainer.classList.remove("buttonContainerWithImage");
         if (countCategory0 >= 1) {
             currentCategory = 1; // Move to the next category
         }
@@ -117,6 +119,7 @@ function getNextChore() {
         chore = choresCategory1[Math.floor(Math.random() * choresCategory1.length)];
         countCategory1++;
         choreDisplay.innerHTML = chore;
+        buttonContainer.classList.remove("buttonContainerWithImage");
         if (countCategory1 >= 5) {
             currentCategory = 2; // Move to Category 2
         }
@@ -124,12 +127,14 @@ function getNextChore() {
         chore = choresCategory2[Math.floor(Math.random() * choresCategory2.length)];
         countCategory2++;
         choreDisplay.innerHTML = `<img src="${chore.imageUrl}" alt="Chore Image"><br>${chore.name}`;
+        buttonContainer.classList.add("buttonContainerWithImage");
         if (countCategory2 >= 4) {
             currentCategory = 3; // Move to Category 3
         }
     } else if (currentCategory === 3) {
         chore = choresCategory3[Math.floor(Math.random() * choresCategory3.length)];
         choreDisplay.innerHTML = "Finish: " + chore;
+        buttonContainer.classList.remove("buttonContainerWithImage");
         // Reset counters if needed
         countCategory1 = 0;
         countCategory2 = 0;
